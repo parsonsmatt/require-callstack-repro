@@ -25,7 +25,7 @@ data ProvideCallStack = ProvideCallStack
 errorRequireCallStack :: RequireCallStack => String -> x
 errorRequireCallStack = error
 
-instance TypeError ('Text "Add RequireCallStack to your function context or use provideCallStack") => IP "provideCallStack" ProvideCallStack
+-- instance TypeError ('Text "Add RequireCallStack to your function context or use provideCallStack") => IP "provideCallStack" ProvideCallStack
 
 provideCallStack :: (RequireCallStackImpl => r) -> r
 provideCallStack r = r
